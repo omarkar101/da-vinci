@@ -1,4 +1,4 @@
-<li class="menu__list-item">
+<li class="menu__list-item" id="list-item" {{on "click" this.onClick}}>
   <img class="menu__item-icon" src="/assets/icons/{{@iconName}}.svg">
-  <a class="menu__item" href={{@route}}>{{yield}}</a>
+  <a class="menu__item" href={{@route}} id="item">{{yield}}</a>
 </li>
