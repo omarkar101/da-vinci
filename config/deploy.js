@@ -1,9 +1,10 @@
-module.exports = function(deployTarget) {
+module.exports = function (deployTarget) {
   let ENV = {
     build: {},
     ghpages: {
-      gitRemoteUrl: 'https://x-access-token:${DAVINCI}@github.com/omarkar101/da-vinci.git'
-    }
+      gitRemoteUrl:
+        'https://x-access-token:${DAVINCI}@github.com/omarkar101/da-vinci.git',
+    },
   };
 
   if (deployTarget === 'gh-pages') {
