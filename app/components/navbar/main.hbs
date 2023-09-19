@@ -1,17 +1,36 @@
-<div class="navbar">
-  <input class="navbar__checkbox" type="checkbox" id="menu-toggle"/>
-  <label class="navbar__trigger" id="trigger" for="menu-toggle"></label>
-  <label class="navbar__burger" id="burger" for="menu-toggle"></label>
-  <ul class="navbar__menu" id="menu">
-    <Navbar::MenuItem @route="/dashboard">Dashboard</Navbar::MenuItem>
+<div class="menu">
+  <input id="menu__toggle" type="checkbox" />
+  <label class="menu__btn" for="menu__toggle">
+    <span></span>
+  </label>
 
-    <Navbar::MenuItem @route="/insurance/shopping">Shopping</Navbar::MenuItem>
-    <Navbar::MenuItem @route="/insurance/ongoing">Ongoing</Navbar::MenuItem>
+  <ul class="menu__box">
+    <div class="menu__box-container">
+      <div class="menu__user">
+        <div class="menu__user-icon">JD</div>
+        <div class="menu__user-title">
+          <div class="menu__user-name">John Doe</div>
+          <div class="menu__user-email">johndoe@organization.com</div>
+        </div>
+      </div>
+      <Navbar::MenuItem @route="/dashboard" @iconName="dashboard">Dashboard</Navbar::MenuItem>
+      <Navbar::MenuItem @route="/insurance/shopping" @iconName="umbrella">Shopping</Navbar::MenuItem>
+      <Navbar::MenuItem @route="/dependents" @iconName="dependents">Dependents</Navbar::MenuItem>
+      <Navbar::MenuItem @route="/billing" @iconName="wallet">Billing</Navbar::MenuItem>
+      <Navbar::MenuItem @route="/history" @iconName="catalog">History</Navbar::MenuItem>
+      <Navbar::MenuItem @route="/retirement" @iconName="pie-chart">Retirement</Navbar::MenuItem>
 
-    <Navbar::MenuItem @route="/dependents">Dependents</Navbar::MenuItem>
+      <div class="menu__buttons">
+        <div class="menu__button">
+          <img src="/assets/icons/settings.svg">
+          <div class="menu__button-title">Settings</div>
+        </div>
 
-    <Navbar::MenuItem @route="/billing">Billing</Navbar::MenuItem>
-
-    <Navbar::MenuItem @route="/retirement">Retirement</Navbar::MenuItem>
+        <div class="menu__button">
+          <img src="/assets/icons/logout.svg">
+          <div class="menu__button-title menu__button-title_color_red">Logout</div>
+        </div>
+      </div>
+    </div>
   </ul>
-</div>
+  </div>

@@ -1,5 +1,7 @@
-@import url("navbar.css");
 @import url("insurance.css");
+@import url("menu.css");
+@import url("plan-card.css");
+@import url("retirement.css");
 @import url("insurance-list.css");
 @import url("insurance-type.css");
 @import url("insurance-filter.css");
@@ -16,5 +18,4 @@ body {
   padding: 0;
   font-family: Inter;
   background-color: #fff;
-  overflow: hidden;
 }
