@@ -1,0 +1,86 @@
+/* stylelint-disable selector-class-pattern */
+.profile-summary {
+  margin: 10px;
+  display: grid;
+  padding: 0 10px;
+  grid-template:
+    "profile-header profile-header profile-header" 60px
+    "line line line" 10px
+    "plans bills-due retirement" 55px
+    / 1fr 1fr 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  box-shadow: 0px 6px 8px 0px #EAEAEA;
+}
+
+.profile-summary__separator {
+  grid-area: line;
+  width: 100%;
+}
+
+.profile-summary__title-plan-name {
+  font-size: 15px;
+}
+
+.profile-summary__header {
+  grid-area: profile-header;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  gap: 20px;
+}
+
+.profile-summary__title-vendor-name {
+  font-size: 10px;
+}
+
+.profile-summary__field-label {
+  color: #7D7D7D;
+  font-size: 12px;
+}
+
+.profile-summary__field-value {
+  font-size: 14px;
+}
+
+.profile-summary__profile-logo {
+  grid-area: plan-photo;
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  background: #1297AC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-summary__title {
+  grid-area: plan-title;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-summary__field-plans {
+  grid-area: plans;
+}
+
+.profile-summary__field-bills-due {
+  grid-area: bills-due;
+}
+
+.profile-summary__field-retirement {
+  grid-area: retirement;
+}
+
+.profile-summary__field {
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: #F5F6FA;
+  width: 70px;
+  height: 41px;
+}

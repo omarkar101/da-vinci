@@ -6,9 +6,9 @@
 @import url("insurance-type.css");
 @import url("insurance-filter.css");
 @import url("search-insurance.css");
-@import url("filter.css");
 @import url("label.css");
 @import url("signup-container.css");
+@import url("profile-summary-widget.css");
 
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Inter");
