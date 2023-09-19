@@ -7,13 +7,6 @@ export default class InvestmentChartComponent extends Component {
   @tracked chartInstance = null;
   @tracked chartData = null;
 
-  updateChart() {
-    if (this.chartInstance) {
-      this.chartInstance.data = this.chartData;
-      this.chartInstance.update();
-    }
-  }
-
   @action
   setupChart(element) {
     const chartElement = element.querySelector('#investment-chart');
