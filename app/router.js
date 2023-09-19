@@ -19,6 +19,6 @@ Router.map(function () {
       this.route('dependents');
     });
     this.route('billing');
-    this.route('k401');
+    this.route('401k');
   });
 });
