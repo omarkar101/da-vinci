@@ -1,0 +1,9 @@
+<div class="insurance-list">
+  {{#each this.insurances as |insurance|}}
+    <InsuranceType::Main
+      @isCore={{insurance.isCore}}
+      @label={{insurance.label}}
+    />
+  {{/each}}
+  <InsuranceType::Empty />
+</div>

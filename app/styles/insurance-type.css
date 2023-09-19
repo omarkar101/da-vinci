@@ -1,0 +1,61 @@
+.insurance-type {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  width: 150px;
+  height: 150px;
+
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  font-size: 15px;
+  color: #1D1E20;
+  box-shadow: 0 6px 8px 0 #EAEAEA;
+}
+
+.insurance-type__label-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.insurance-type__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+}
+
+.insurance-add-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+
+  background: linear-gradient(to right, #1297AC 50%, #fff 0%) top/20px 1px repeat-x, /* top */
+    linear-gradient(#1297AC 50%, #fff 0%) right/1px 20px repeat-y, /* right */
+    linear-gradient(to right, #1297AC 50%, #fff 0%) bottom/20px 1px repeat-x, /* bottom */
+    linear-gradient(#1297AC 50%, #fff 0%) left/1px 20px repeat-y; /* left */
+}
+
+.insurance-add-type_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+  background-color: #F5F6FA;
+}
+
+.insurance-type__text {
+  margin: 0;
+}
