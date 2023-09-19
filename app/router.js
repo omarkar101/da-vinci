@@ -17,6 +17,7 @@ Router.map(function () {
 
     this.route('dependents');
     this.route('billing');
+    this.route('history');
     this.route('retirement');
   });
 });

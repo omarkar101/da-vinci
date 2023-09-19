@@ -1,9 +1,9 @@
 <div class="insurance-list">
   {{#each this.insurances as |insurance|}}
-    <InsuranceType::Main
+    <Insurance::CategoryCard::Main
       @isCore={{insurance.isCore}}
       @label={{insurance.label}}
     />
   {{/each}}
-  <InsuranceType::Empty />
+  <Insurance::CategoryCard::Add />
 </div>
