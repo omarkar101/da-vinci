@@ -1,10 +1,15 @@
 @import url("billing.css");
+@import url("insurance.css");
 @import url("menu.css");
 @import url("plan-card.css");
 @import url("retirement.css");
 @import url("insurance-list.css");
 @import url("insurance-type.css");
+@import url("insurance-filter.css");
+@import url("search-insurance.css");
+@import url("filter.css");
 @import url("label.css");
+@import url("signup-container.css");
 
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Inter");
@@ -13,6 +18,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
   font-family: Inter;
   background-color: #fff;
 }

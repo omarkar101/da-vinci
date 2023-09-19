@@ -4,8 +4,10 @@
   align-items: center;
   flex-direction: column;
 
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
+
+  box-sizing: border-box;
 
   padding: 8px;
   border-radius: 10px;
@@ -34,14 +36,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 150px;
-  height: 150px;
+  box-sizing: border-box;
+  width: 170px;
+  height: 170px;
   border-radius: 10px;
-
-  background: linear-gradient(to right, #1297AC 50%, #fff 0%) top/20px 1px repeat-x, /* top */
-    linear-gradient(#1297AC 50%, #fff 0%) right/1px 20px repeat-y, /* right */
-    linear-gradient(to right, #1297AC 50%, #fff 0%) bottom/20px 1px repeat-x, /* bottom */
-    linear-gradient(#1297AC 50%, #fff 0%) left/1px 20px repeat-y; /* left */
+  border: 1px dashed #1297AC;
 }
 
 .insurance-add-type_icon {
@@ -58,4 +57,11 @@
 
 .insurance-type__text {
   margin: 0;
+  margin-top: 8px;
+}
+
+.insurance-type__add-text {
+  font-size: 15px;
+  margin: 0;
+  margin-top: 12px;
 }

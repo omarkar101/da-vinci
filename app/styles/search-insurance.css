@@ -1,0 +1,63 @@
+.search-insurance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 20px;
+
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+}
+
+.search-insurance__search-field {
+  flex: 1;
+  height: 45px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  box-sizing: border-box;
+  padding: 8px 12px;
+
+  border-radius: 10px;
+  background-color: #F5F6FA;
+}
+
+.search-insurance__search-icon {
+  color: #8F959E;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.search-insurance__search-input {
+  background: none;
+  border: none;
+  padding: 4px 4px 0 4px;
+  width: 100%;
+}
+
+.search-insurance__search-input:focus {
+  outline: none;
+}
+
+.search-insurance__filter-btn {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  background-color: #404040;
+}
+
+.search-insurance__filter-icon {
+  width: 19px;
+  height: 19px;
+}
