@@ -10,20 +10,26 @@
   </div>
   <div class="plan-card__field-deductible">
     <div class="plan-card__field-label">Deductible</div>
-    <div class="plan-card__field-value">$1000</div>
+    <div class="plan-card__field-value">{{this.deductibleValue}}</div>
   </div>
   <div class="plan-card__field-coinsurance">
     <div class="plan-card__field-label">Coinsurance</div>
-    <div class="plan-card__field-value">$1000</div>
+    <div class="plan-card__field-value">{{this.coinsuranceValue}}</div>
   </div>
   <div class="plan-card__field-plan-network">
     <div class="plan-card__field-label">Plan Network</div>
-    <div class="plan-card__field-value">$100</div>
+    <div class="plan-card__field-value">{{this.planNetworkValue}}</div>
   </div>
 
   <div class="plan-card__button-container">
-    <button type="button" class="plan-card__button">
-      Acquire Plan
-    </button>
+    {{#if this.isAcquired}}
+      <button type="button" class="plan-card__button plan-card__button_remove-plan">
+        Remove Plan
+      </button>
+    {{else}}
+      <button type="button" class="plan-card__button">
+        Acquire Plan
+      </button>
+    {{/if}}
   </div>
 </div>
