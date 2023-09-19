@@ -1,0 +1,38 @@
+<div class="signup-container">
+  <div class="signup-container__header">
+    <div class="signup-container__header-title">
+      Create Account
+    </div>
+  </div>
+  <form class="signup-container__form">
+    <div class="signup-container__fields">
+      <div class="signup-container__field">
+        <label class="signup-container__field-label">
+          Email Address
+        </label>
+        {{!-- template-lint-disable require-input-label --}}
+        <input type="email" class="signup-container__field-input" />
+      </div>
+      <div class="signup-container__field">
+        <label class="signup-container__field-label">
+          Password
+        </label>
+        {{!-- template-lint-disable require-input-label --}}
+        <input type="password" class="signup-container__field-input" />
+      </div>
+      <div class="signup-container__field">
+        <label class="signup-container__field-label">
+          SIMON Code
+        </label>
+        {{!-- template-lint-disable require-input-label --}}
+        <input type="text" class="signup-container__field-input" />
+      </div>
+      <div class="signup-container__already-have-an-account">
+        <div class="signup-container__already-have-an-account-label">
+          Already Have an account? <a href=""><span class="signup-container__already-have-an-account-label-login">Log in</span></a>
+        </div>
+      </div>
+    </div>
+    <LinkTo @route="index" class="signup-container__submit">Create Account</LinkTo>
+  </form>
+</div>
