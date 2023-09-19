@@ -31,7 +31,7 @@ export default class InvestmentChartComponent extends Component {
           lineTension: 0.4,
         },
         {
-          label: '401(k) Account 2',
+          label: 'Fidelity Investments 401(k) Account',
           data: [4800, 5200, 5400, 5600, 5900, 6300],
           borderColor: 'rgba(255, 99, 132, 1)',
           fill: {
@@ -46,7 +46,7 @@ export default class InvestmentChartComponent extends Component {
           lineTension: 0.4,
         },
         {
-          label: '401(k) Account 3',
+          label: 'Empower Retirement 401(k) Account',
           data: [5200, 5800, 5900, 6100, 6300, 6700],
           borderColor: 'rgba(54, 162, 235, 1)',
           fill: {
@@ -61,7 +61,7 @@ export default class InvestmentChartComponent extends Component {
           lineTension: 0.4,
         },
         {
-          label: '401(k) Account 4',
+          label: 'Vanguard 401(k) Account',
           data: [5500, 5900, 6000, 6300, 6400, 6800],
           borderColor: 'rgba(255, 205, 86, 1)',
           fill: {

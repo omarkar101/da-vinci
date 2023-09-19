@@ -80,6 +80,7 @@
     "edition": "octane"
   },
   "dependencies": {
+    "bootstrap": "^5.3.2",
     "chart.js": "^4.4.0"
   }
 }

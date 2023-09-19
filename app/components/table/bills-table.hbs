@@ -1,0 +1,19 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      {{log this.columns}}
+      {{#each this.columns as |column|}}
+        <th {{on "click" (fn this.sortBills column.valuePath)}}>{{column.name}}</th>
+      {{/each}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each this.bills as |bill|}}
+      <tr>
+        <td>{{bill.insuranceType}}</td>
+        <td>{{bill.date}}</td>
+        <td>{{bill.amount}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
