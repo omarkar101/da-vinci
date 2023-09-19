@@ -1,5 +1,8 @@
 @import url("plan-card.css");
 @import url("navbar.css");
+@import url("insurance-list.css");
+@import url("insurance-type.css");
+@import url("label.css");
 
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Inter");

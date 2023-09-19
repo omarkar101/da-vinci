@@ -1,0 +1,26 @@
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 15px;
+  width: fit-content;
+
+  padding: 0 6px;
+  color: #FFFFFF;
+  font-size: 12px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.label__text {
+  margin: 0;
+}
+
+.label-color-blue {
+  background-color: #1297AC;
+}
+
+.label-color-purple {
+  background-color: #9747FF;
+}
