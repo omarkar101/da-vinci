@@ -1,6 +1,11 @@
 <div class="insurance-page">
-  <p class="insurance-page__title">Insurance</p>
-  <Insurance::Filter::Main />
-  <Insurance::SearchBar />
+  <div style="padding: 16px">
+    <p class="insurance-page__title">Insurance</p>
+    <Insurance::Filter::Main
+      @categories={{this.filterCategories}}
+      @changeActiveCategory={{action this.changeActiveCategory}}
+    />
+    <Insurance::SearchBar />
+  </div>
   {{outlet}}
 </div>

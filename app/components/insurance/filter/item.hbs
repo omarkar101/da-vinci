@@ -1,3 +1,9 @@
-<div class="insurance-filter-item {{if @isActive "insurance-filter-item__active"}}">
-  <p class="insurance-filter-item__text">{{@filter}}</p>
+<div
+  class="
+    insurance-filter-item
+    {{if @category.isActive "insurance-filter-item__active"}}
+  "
+  {{on "click" (fn @changeActiveCategory @category.key)}}
+>
+  <p class="insurance-filter-item__text">{{@category.label}}</p>
 </div>

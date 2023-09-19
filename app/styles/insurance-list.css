@@ -2,6 +2,8 @@
   display: grid;
   width: 100%;
   overflow-y: scroll;
+  padding: 16px;
+  box-sizing: border-box;
   grid-template-columns: 170px 170px;
   justify-content: space-between;
   row-gap: 16px;

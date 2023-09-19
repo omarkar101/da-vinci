@@ -2,8 +2,9 @@
   {{#each this.insurances as |insurance|}}
     <Insurance::CategoryCard::Main
       @isCore={{insurance.isCore}}
+      @imgSrc={{insurance.imgSrc}}
       @label={{insurance.label}}
     />
   {{/each}}
-  <Insurance::CategoryCard::Add />
+  {{!-- <Insurance::CategoryCard::Add /> --}}
 </div>
