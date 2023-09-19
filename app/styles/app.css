@@ -1,1 +1,13 @@
-/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+@import url("navbar.css");
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  background-color: #fff;
+  overflow: hidden;
+}
