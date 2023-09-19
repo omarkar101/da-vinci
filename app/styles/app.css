@@ -8,6 +8,7 @@
 @import url("search-insurance.css");
 @import url("filter.css");
 @import url("label.css");
+@import url("signup-container.css");
 
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Inter");
@@ -16,6 +17,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
   font-family: Inter;
   background-color: #fff;
 }
