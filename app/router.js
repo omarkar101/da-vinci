@@ -14,11 +14,8 @@ Router.map(function () {
       this.route('ongoing');
     });
 
-    this.route('dependents-and-beneficiaries', function () {
-      this.route('beneficiaries');
-      this.route('dependents');
-    });
+    this.route('dependents');
     this.route('billing');
-    this.route('k401');
+    this.route('retirement');
   });
 });
