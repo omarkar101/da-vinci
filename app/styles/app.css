@@ -1,5 +1,5 @@
 @import url("navbar.css");
-
+@import url("retirment.css");
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Inter");
 
@@ -9,5 +9,4 @@ body {
   padding: 0;
   font-family: Inter;
   background-color: #fff;
-  overflow: hidden;
 }

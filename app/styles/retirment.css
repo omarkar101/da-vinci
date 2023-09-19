@@ -1,0 +1,18 @@
+.retirement {
+  background-color: #F5F6FA;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+
+.retirement__title {
+  /* TODO: Remove this when menu fixed */
+  margin-top: 100px;
+}
+
+.retirement__card {
+  background-color: #FFFFFF;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
