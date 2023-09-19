@@ -1,0 +1,35 @@
+/* stylelint-disable selector-class-pattern */
+.plan-card {
+  background-color: red;
+  display: grid;
+  grid-template:
+    "plan-photo plan-title plan-title" 2fr
+    "deductible coinsurance plan-network" 1fr
+    "acquire-button acquire-button acquire-button" 1fr
+    / 1fr 1fr 1fr;
+}
+
+.plan-card__photo {
+  grid-area: plan-photo;
+  width: 60px;
+}
+
+.plan-card__title {
+  grid-area: plan-title;
+}
+
+.plan-card__field-deductible {
+  grid-area: deductible;
+}
+
+.plan-card__field-coinsurance {
+  grid-area: coinsurance;
+}
+
+.plan-card__field-plan-network {
+  grid-area: plan-network;
+}
+
+.plan-card__button {
+  grid-area: acquire-button;
+}
