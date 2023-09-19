@@ -3,9 +3,15 @@
   <label class="navbar__trigger" id="trigger" for="menu-toggle"></label>
   <label class="navbar__burger" id="burger" for="menu-toggle"></label>
   <ul class="navbar__menu" id="menu">
-    <Navbar::MenuItem>Home</Navbar::MenuItem>
-    <Navbar::MenuItem>Home</Navbar::MenuItem>
-    <Navbar::MenuItem>Home</Navbar::MenuItem>
-    <Navbar::MenuItem>Home</Navbar::MenuItem>
+    <Navbar::MenuItem @route="/dashboard">Dashboard</Navbar::MenuItem>
+
+    <Navbar::MenuItem @route="/insurance/shopping">Shopping</Navbar::MenuItem>
+    <Navbar::MenuItem @route="/insurance/ongoing">Ongoing</Navbar::MenuItem>
+
+    <Navbar::MenuItem @route="/dependents">Dependents</Navbar::MenuItem>
+
+    <Navbar::MenuItem @route="/billing">Billing</Navbar::MenuItem>
+
+    <Navbar::MenuItem @route="/retirement">Retirement</Navbar::MenuItem>
   </ul>
 </div>

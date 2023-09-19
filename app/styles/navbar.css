@@ -1,15 +1,12 @@
-/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
-
 .navbar__menu-list-item,
 .navbar__menu-list-link {
   margin: 75px 0 -55px;
-  color: #404040;
-  font:
-    14pt Roboto,
-    sans-serif;
-  font-weight: 700;
-  line-height: 1.8;
+  color: #1d1e20;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
   text-decoration: none;
   text-transform: none;
   list-style: none;
@@ -62,24 +59,8 @@
 }
 
 #menu-toggle:checked + #trigger + #burger {
-  top: 35px;
-  transform: rotate(180deg);
-  transition: transform 0.2s ease;
-}
-
-#menu-toggle:checked + #trigger + #burger::before {
-  width: 20px;
-  top: -2px;
-  left: 18px;
-  transform: rotate(45deg) translateX(-5px);
-  transition: transform 0.2s ease;
-}
-
-#menu-toggle:checked + #trigger + #burger::after {
-  width: 20px;
-  top: 2px;
-  left: 18px;
-  transform: rotate(-45deg) translateX(-5px);
+  top: 40px;
+  transform: rotate(90deg);
   transition: transform 0.2s ease;
 }
 
@@ -113,9 +94,10 @@
 }
 
 @keyframes checked-anim {
-  50% {
-    width: 3000px;
-    height: 3000px;
+  0% {
+    left: 0px;
+    top: 0px;
+    border-radius: 20%;
   }
 
   100% {
