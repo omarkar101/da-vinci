@@ -22,6 +22,7 @@
   color: #FFFFFF;
   height: 100%;
   border-radius: 10px;
+  transition: 0.2s ease-in-out;
 }
 
 .insurance-filter-item__active {
