@@ -1,0 +1,30 @@
+.filter-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  box-sizing: border-box;
+  padding: 10px;
+
+  background-color: #404040;
+}
+
+.insurance-filter-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 48%;
+  color: #FFFFFF;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.insurance-filter-item__active {
+  color: #404040;
+  background-color: #FFFFFF;
+}

@@ -1,8 +1,12 @@
+@import url("insurance.css");
 @import url("menu.css");
 @import url("plan-card.css");
 @import url("retirement.css");
 @import url("insurance-list.css");
 @import url("insurance-type.css");
+@import url("insurance-filter.css");
+@import url("search-insurance.css");
+@import url("filter.css");
 @import url("label.css");
 
 /* Fonts */

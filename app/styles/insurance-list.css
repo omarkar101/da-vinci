@@ -1,6 +1,8 @@
 .insurance-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-content: center;
+  width: 100%;
+  overflow-y: scroll;
+  grid-template-columns: 170px 170px;
+  justify-content: space-between;
   row-gap: 16px;
 }
