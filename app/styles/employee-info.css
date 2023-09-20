@@ -1,0 +1,32 @@
+.progress-bar {
+  display: block;
+  width: 100%;
+  position: fixed; /* This will make it stick to the top */
+  top: 0;
+  left: 0;
+  height: 5px;  /* Adjust height as required */
+  border: none;
+  color: #1297AC; /* The color of the progress bar */
+  background-color: #fff;
+}
+
+progress::-webkit-progress-bar {
+  background-color: white; /* This will set the background (unfinished part) to white */
+}
+
+progress::-webkit-progress-value {
+  background-color: #1297AC; /* Color for the filled part */
+}
+
+.employee-info-container {
+  margin-top: 60px;
+  display: flex;
+}
+
+.employee-info-container__header {
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  margin-left: 20px;
+}
