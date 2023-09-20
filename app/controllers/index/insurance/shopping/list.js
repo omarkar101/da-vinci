@@ -71,6 +71,8 @@ export default class InsuranceShoppingListController extends Controller {
   reset() {
     this.indexController.headerIcon = null;
     this.indexController.searchTerm = '';
+    this.filterCategories[0].isActive = true;
+    this.filterCategories[1].isActive = false;
   }
 
   @tracked
