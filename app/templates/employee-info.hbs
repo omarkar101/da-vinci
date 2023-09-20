@@ -4,5 +4,17 @@
   <div class="employee-info-container__header">
     {{this.title}}
   </div>
-  {{outlet}}
+  <div class="employee-info-container__body">
+    {{outlet}}
+  </div>
+  <div class="employee-info-container__footer">
+    {{#if true}}
+      <div class="employee-info-container__footer-back-button">
+        Back
+      </div>
+    {{/if}}
+    <div class="employee-info-container__footer-next-button">
+      Next
+    </div>
+  </div>
 </div>

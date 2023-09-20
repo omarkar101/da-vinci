@@ -1,8 +1,12 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
+import { inject as service } from '@ember/service';
 
 export default class EmployeeInfoController extends Controller {
+  @service
+  router;
+
   @tracked
   progressValue = 20;
 
@@ -10,7 +14,7 @@ export default class EmployeeInfoController extends Controller {
   title = 'My Details';
 
   @action
-  changePage(progressValue, title) {
+  applyChanges(progressValue, title) {
     this.progressValue = progressValue;
     this.title = title;
   }
