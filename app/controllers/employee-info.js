@@ -13,9 +13,17 @@ export default class EmployeeInfoController extends Controller {
   @tracked
   title = 'My Details';
 
+  @tracked
+  previousRoute = 'employee-info';
+
+  @tracked
+  nextRoute = 'employee-info.employment-info-setup';
+
   @action
-  applyChanges(progressValue, title) {
+  applyChanges(progressValue, title, previousRoute, nextRoute) {
     this.progressValue = progressValue;
     this.title = title;
+    this.previousRoute = previousRoute;
+    this.nextRoute = nextRoute;
   }
 }
