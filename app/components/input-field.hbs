@@ -1,0 +1,4 @@
+<div class="input">
+  <label class="input__label">{{this.label}}</label>
+  <input class="input__field" type="{{this.type}}" placeholder="{{this.placeholder}}" value={{this.value}} {{on "input" (action (mut this.value) value="target.value")}}>
+</div>

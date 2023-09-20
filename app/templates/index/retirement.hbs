@@ -1,4 +1,27 @@
 <div class="retirement">
+  {{#if this.showDialog}}
+  <RetirementDialog @onClose={{this.closeDialog}} />
+  {{/if}}
   <Charts::InvestmentChart />
   <Charts::DoughnutChart />
+  <div class="retirement__card">
+    <div class="retirement__card-header">
+      <h2>401(k) Accounts</h2>
+      <Button @label="Manage Account(s)" @styleClass="button button__header" @onClick={{this.openDialog}} />
+    </div>
+    <div class="retirement-summary__table">
+      <div class="retirement-summary__table-header">
+        <div class="retirement-summary__table-header-item">VENDOR</div>
+        <div class="retirement-summary__table-header-item">ACCOUNT #</div>
+        <div class="retirement-summary__table-header-item">BALANCE</div>
+      </div>
+      {{#each this.accounts as |account|}}
+        <div class="retirement-summary__table-row">
+          <div class="retirement-summary__table-row-item" style={{account.color}}>{{account.vendor}}</div>
+          <div class="retirement-summary__table-row-item" style={{account.color}}>{{account.number}}</div>
+          <div class="retirement-summary__table-row-item" style={{account.color}}>{{account.balance}}</div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
 </div>

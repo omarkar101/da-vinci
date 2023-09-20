@@ -1,4 +1,7 @@
+@import url("billing.css");
 @import url("insurance.css");
+@import url("input.css");
+@import url("button.css");
 @import url("menu.css");
 @import url("plan-card.css");
 @import url("retirement.css");
@@ -14,6 +17,8 @@
 @import url("dashboard.css");
 @import url("insurance-profile-section.css");
 @import url("retirement-profile-section.css");
+@import url("employee-info.css");
+@import url("dependent.css");
 
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;800&display=swap");
@@ -24,5 +29,7 @@ body {
   padding: 0;
   height: 100%;
   font-family: Inter;
+  overflow-y: auto;
+  overflow-x: hidden;
   background-color: #fff;
 }

@@ -1,10 +1,11 @@
 <div class="plan-card">
   <div class="plan-card__header">
-      <img class="plan-card__photo" src="/assets/medical-plan.svg" alt="medical plan" />
-      <div class="plan-card__title">
-        <div class="plan-card__title-plan-name">{{this.planName}}</div>
-        <div class="plan-card__title-vendor-name">Vendor Name</div>
-      </div>
+    <img class="plan-card__photo" src="/assets/medical-plan.svg" alt="medical plan" />
+    <div class="plan-card__title">
+      <div class="plan-card__title-plan-name">{{this.planName}}</div>
+      <div class="plan-card__title-vendor-name">Vendor Name</div>
+    </div>
+    <img class="plan-card__dot-menu" src="/assets/dot-menu.svg" alt="dot menu" />
   </div>
   <div class="plan-card__body">
     <div class="plan-card__field-amounts">
@@ -22,13 +23,13 @@
   </div>
   <div class="plan-card__button-container">
     {{#if this.isAcquired}}
-      <button type="button" class="plan-card__button plan-card__button_remove-plan">
-        Remove Plan
-      </button>
+    <button type="button" class="plan-card__button plan-card__button_remove-plan">
+      Remove Plan
+    </button>
     {{else}}
-      <button type="button" class="plan-card__button">
-        Acquire Plan
-      </button>
+    <button type="button" class="plan-card__button">
+      Acquire Plan
+    </button>
     {{/if}}
   </div>
 </div>

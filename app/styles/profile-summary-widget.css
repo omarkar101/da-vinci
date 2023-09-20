@@ -8,7 +8,8 @@
     "plans bills-due retirement" 55px
     / 1fr 1fr 1fr;
   border: 1px solid rgba(0, 0, 0, 0.02);
-  box-shadow: 0px 6px 8px 0px #EAEAEA;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   background-color: #fff;
 }
 
@@ -52,6 +53,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.profile-summary__profile-logo_bigger {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.profile-summary__profile-logo_salmon {
+  background-color: salmon;
+}
+
+.profile-summary__profile-logo_light-blue {
+  background-color: lightblue;
+}
+
+.profile-summary__profile-logo_red {
+  background-color: red;
+}
+
+.profile-summary__profile-logo_green {
+  background-color: green;
 }
 
 .profile-summary__title {

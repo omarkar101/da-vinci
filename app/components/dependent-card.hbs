@@ -1,0 +1,41 @@
+<div class="plan-card plan-card_height_150">
+  <div class="plan-card__header">
+    <div
+      class="profile-summary__profile-logo profile-summary__profile-logo_bigger profile-summary__profile-logo_{{@color}}">
+      {{@acr}}
+    </div>
+    <div class="plan-card__title">
+      <div class="plan-card__title-plan-name">{{@name}}</div>
+      <div class="dependent-card__checkbox">
+        <img class="dependent-card__check" src="/assets/checkmark.svg" alt="checkbox" />
+        <div class="plan-card__title-vendor-name">Dependent</div>
+      </div>
+      <div class="dependent-card__checkbox">
+        <img class="dependent-card__check" src="/assets/checkmark.svg" alt="checkbox" />
+        <div class="plan-card__title-vendor-name">Beneficiary</div>
+      </div>
+    </div>
+    <img class="plan-card__dot-menu" src="/assets/dot-menu.svg" alt="dot menu" />
+  </div>
+  <div class="plan-card__body">
+    <div class="plan-card__field-amounts">
+      <div class="plan-card__field-label">Date of Birth</div>
+      <div class="plan-card__field-value">{{@dob}}</div>
+    </div>
+    <div class="plan-card__field-amounts">
+      <div class="plan-card__field-label">Relationship</div>
+      <div class="plan-card__field-value">{{@rel}}</div>
+    </div>
+    <div class="plan-card__field-amounts dependent-card__plan-section">
+      <div class="plan-card__field-label">Plans</div>
+      <div class="dependent-card__plans">
+        <div class="plan-card__field-value">{{@plans}}</div>
+        <img height="15px" width="15px" src="/assets/icons/heart-with-red-background.svg" alt="heart" />
+        {{#if (eq @plans '3')}}
+        <img height="15px" width="15px" src="/assets/icons/dental.svg" alt="heart" />
+        <img height="15px" width="15px" src="/assets/icons/vision.svg" alt="heart" />
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>

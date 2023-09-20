@@ -1,0 +1,20 @@
+<progress class="progress-bar" value={{this.progressValue}} max="100" />
+
+<div class="employee-info-container">
+  <div class="employee-info-container__header">
+    {{this.title}}
+  </div>
+  <div class="employee-info-container__body">
+    {{outlet}}
+  </div>
+  <div class="employee-info-container__footer">
+    {{#if true}}
+      <div class="employee-info-container__footer-back-button">
+        Back
+      </div>
+    {{/if}}
+    <div class="employee-info-container__footer-next-button">
+      Next
+    </div>
+  </div>
+</div>

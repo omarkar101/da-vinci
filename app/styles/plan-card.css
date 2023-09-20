@@ -66,3 +66,13 @@
 .plan-card__button_remove-plan {
   background-color: #F36D5A;
 }
+
+.plan-card_height_150 {
+  height: 150px;
+}
+
+.plan-card__dot-menu {
+  align-self: start;
+  margin-left: auto;
+  cursor: pointer;
+}
