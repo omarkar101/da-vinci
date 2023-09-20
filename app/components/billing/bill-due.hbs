@@ -1,0 +1,15 @@
+<div class="bill-due">
+  <img src={{@iconSrc}} alt="medical plan" />
+  <div class="bill-due__title">
+    <div class="bill-due__name">{{@planName}}</div>
+    <div class="bill-due__vendor">{{@vendorName}}</div>
+    <div class="bill-due__type">
+      <img height="17px" width="17px" src={{@typeIconSrc}} alt="heart"/>
+      <div class="bill-due__type-name">{{@type}}</div>
+    </div>
+  </div>
+  <div class="bill-due__info">
+    <div class="bill-due__info-date {{if @isGreen "bill-due__info-date_color_green"}}">{{@date}}</div>
+    <div class="bill-due__info-amount {{if @isGreen "bill-due__info-amount_color_green"}}">{{@amount}}</div>
+  </div>
+</div>
