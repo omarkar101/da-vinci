@@ -1,33 +1,8 @@
 import Controller, { inject as controller } from '@ember/controller';
-import { tracked } from '@glimmer/tracking';
-import { action } from '@ember/object';
 
 export default class InsuranceController extends Controller {
-  @tracked
-  searchTerm = '';
-
   @controller('index')
   indexController;
-
-  @tracked
-  filterCategories = [
-    new Category({
-      key: 'shopping',
-      label: 'Shopping',
-      isActive: true,
-    }),
-    new Category({
-      key: 'current',
-      label: 'Current',
-      isActive: false,
-    }),
-  ];
-
-  get filteredCoverages() {
-    return this.allCoverageFields.filter(({ label }) =>
-      label.toLowerCase().includes(this.searchTerm.toLowerCase()),
-    );
-  }
 
   get allCoverageFields() {
     let coverageFields = [];
@@ -45,41 +20,8 @@ export default class InsuranceController extends Controller {
     return coverageFields;
   }
 
-  get isFilteredInsuranceListEmpty() {
-    return !this.filteredCoverages.length;
-  }
-
-  @action
-  setSearchTerm(newTerm) {
-    this.searchTerm = newTerm;
-  }
-
-  @action
-  changeActiveCategory(newCategory) {
-    this.filterCategories.forEach(
-      (category) => (category.isActive = category.key === newCategory),
-    );
-  }
-
   setup() {
     this.indexController.headerTitle = 'Insurance';
-  }
-}
-
-class Category {
-  @tracked
-  key = null;
-
-  @tracked
-  label = null;
-
-  @tracked
-  isActive = null;
-
-  constructor({ key, label, isActive }) {
-    this.key = key;
-    this.label = label;
-    this.isActive = isActive;
   }
 }
 
@@ -93,9 +35,9 @@ const COVERAGES = {
         label: 'Medical',
         imgSrc: 'heart.svg',
         coverages: [
-          { name: 'Oscar' },
-          { name: 'Humana' },
-          { name: 'UnitedHealthCare' },
+          { name: 'Oscar', status: 'shopping' },
+          { name: 'Humana', status: 'current' },
+          { name: 'UnitedHealthCare', status: 'shopping' },
         ],
       },
       {
@@ -103,10 +45,10 @@ const COVERAGES = {
         label: 'Life',
         imgSrc: 'life.svg',
         coverages: [
-          { name: 'Bestow' },
-          { name: 'New York Life' },
-          { name: 'Prudential' },
-          { name: 'Northwestern Mutual' },
+          { name: 'Bestow', status: 'shopping' },
+          { name: 'New York Life', status: 'current' },
+          { name: 'Prudential', status: 'current' },
+          { name: 'Northwestern Mutual', status: 'shopping' },
         ],
       },
       {
@@ -114,9 +56,9 @@ const COVERAGES = {
         label: 'Dental',
         imgSrc: 'tooth.svg',
         coverages: [
-          { name: 'Bestow' },
-          { name: 'United Concordia' },
-          { name: 'Cigna' },
+          { name: 'Bestow', status: 'current' },
+          { name: 'United Concordia', status: 'shopping' },
+          { name: 'Cigna', status: 'shopping' },
         ],
       },
       {
@@ -124,10 +66,10 @@ const COVERAGES = {
         label: 'Vision',
         imgSrc: 'glasses.svg',
         coverages: [
-          { name: 'VSP Vision Care' },
-          { name: 'EyeMed' },
-          { name: 'Davis Vision' },
-          { name: 'FedVIP' },
+          { name: 'VSP Vision Care', status: 'shopping' },
+          { name: 'EyeMed', status: 'shopping' },
+          { name: 'Davis Vision', status: 'current' },
+          { name: 'FedVIP', status: 'current' },
         ],
       },
     ],
@@ -141,25 +83,29 @@ const COVERAGES = {
         label: 'Critical Illness',
         imgSrc: 'virus.svg',
         coverages: [
-          { name: 'Aflac' },
-          { name: 'Colonial Life' },
-          { name: 'MetLife' },
+          { name: 'Aflac', status: 'shopping' },
+          { name: 'Colonial Life', status: 'current' },
+          { name: 'MetLife', status: 'shopping' },
         ],
       },
       {
         key: 'accident',
         label: 'Accident',
         imgSrc: 'warning.svg',
-        coverages: [{ name: 'Aflac' }, { name: 'MetLife' }, { name: 'Unum' }],
+        coverages: [
+          { name: 'Aflac', status: 'shopping' },
+          { name: 'MetLife', status: 'shopping' },
+          { name: 'Unum', status: 'current' },
+        ],
       },
       {
         key: 'cancer',
         label: 'Cancer',
         imgSrc: 'cancer.svg',
         coverages: [
-          { name: 'Aflac' },
-          { name: 'Cancer Treatment Centers' },
-          { name: 'MetLife' },
+          { name: 'Aflac', status: 'shopping' },
+          { name: 'Cancer Treatment Centers', status: 'current' },
+          { name: 'MetLife', status: 'shopping' },
         ],
       },
     ],
@@ -173,10 +119,10 @@ const COVERAGES = {
         label: 'Auto',
         imgSrc: 'auto.svg',
         coverages: [
-          { name: 'MetroMile' },
-          { name: 'State Farm' },
-          { name: 'Geico' },
-          { name: 'Progressive' },
+          { name: 'MetroMile', status: 'shopping' },
+          { name: 'State Farm', status: 'current' },
+          { name: 'Geico', status: 'shopping' },
+          { name: 'Progressive', status: 'shopping' },
         ],
       },
       {
@@ -184,10 +130,10 @@ const COVERAGES = {
         label: 'Home',
         imgSrc: 'home.svg',
         coverages: [
-          { name: 'Hippo' },
-          { name: 'Allstate' },
-          { name: 'State Farm' },
-          { name: 'Liberty Mutual' },
+          { name: 'Hippo', status: 'shopping' },
+          { name: 'Allstate', status: 'shopping' },
+          { name: 'State Farm', status: 'shopping' },
+          { name: 'Liberty Mutual', status: 'shopping' },
         ],
       },
       {
@@ -195,10 +141,10 @@ const COVERAGES = {
         label: 'Pet',
         imgSrc: 'pet.svg',
         coverages: [
-          { name: 'Pumpkin' },
-          { name: 'ASPCA' },
-          { name: 'Figo' },
-          { name: 'Spot' },
+          { name: 'Pumpkin', status: 'current' },
+          { name: 'ASPCA', status: 'shopping' },
+          { name: 'Figo', status: 'shopping' },
+          { name: 'Spot', status: 'shopping' },
         ],
       },
       {
@@ -206,10 +152,10 @@ const COVERAGES = {
         label: 'Travel',
         imgSrc: 'plane.svg',
         coverages: [
-          { name: 'Spot' },
-          { name: 'AIG Travel' },
-          { name: 'Travelers' },
-          { name: 'Allianze Global Assistance' },
+          { name: 'Spot', status: 'shopping' },
+          { name: 'AIG Travel', status: 'current' },
+          { name: 'Travelers', status: 'shopping' },
+          { name: 'Allianze Global Assistance', status: 'shopping' },
         ],
       },
       {
@@ -217,10 +163,10 @@ const COVERAGES = {
         label: 'Legal',
         imgSrc: 'legal.svg',
         coverages: [
-          { name: 'LegalShield' },
-          { name: 'Hyatt Legal' },
-          { name: 'Rocket Lawyer' },
-          { name: 'USLegal' },
+          { name: 'LegalShield', status: 'shopping' },
+          { name: 'Hyatt Legal', status: 'shopping' },
+          { name: 'Rocket Lawyer', status: 'shopping' },
+          { name: 'USLegal', status: 'shopping' },
         ],
       },
     ],

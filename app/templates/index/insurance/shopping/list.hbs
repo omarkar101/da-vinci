@@ -1,5 +1,20 @@
-<div class="coverages-list">
-  {{#each this.selectedCoverages}}
-    <PlanCard />
-  {{/each}}
+<div style="padding: 16px">
+  <Insurance::Filter::Main
+    @categories={{this.filterCategories}}
+    @changeActiveCategory={{action this.changeActiveCategory}}
+  />
 </div>
+{{#if this.hasCoveragesToShow}}
+  <div class="coverages-list">
+    {{#each this.coveragesToShow as |coverage|}}
+      <PlanCard
+        @status={{coverage.status}}
+        @planName={{coverage.name}}
+      />
+    {{/each}}
+  </div>
+{{else}}
+  <div class="empty-list">
+    <h2>No results found</h2>
+  </div>
+{{/if}}
