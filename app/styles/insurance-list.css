@@ -4,7 +4,7 @@
   overflow-y: scroll;
   padding: 16px;
   box-sizing: border-box;
-  grid-template-columns: 170px 170px;
+  grid-template-columns: 200px 200px;
   justify-content: space-between;
   row-gap: 16px;
 }

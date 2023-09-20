@@ -1,9 +1,9 @@
-<div class="insurance-type">
+<div class="insurance-type" {{on "click" this.onClick}}>
   <div class="insurance-type__label-container">
-    <Insurance::Label @isCore={{@isCore}} />
+    <Insurance::Label @type={{@insurance.type}} />
   </div>
   <div class="insurance-type__info">
-    <img class="" src="/assets/icons/{{@imgSrc}}" />
-    <p class="insurance-type__text">{{@label}}</p>
+    <img class="" src="/assets/icons/{{@insurance.imgSrc}}" />
+    <p class="insurance-type__text">{{@insurance.label}}</p>
   </div>
 </div>
