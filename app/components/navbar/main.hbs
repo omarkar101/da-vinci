@@ -1,5 +1,5 @@
 <div class="menu">
-  <input id="menu__toggle" type="checkbox" />
+  <Input id="menu__toggle" @type="checkbox" @checked={{this.isMenuOpen}}/>
   <label class="menu__btn" for="menu__toggle">
     <span></span>
   </label>
@@ -13,12 +13,12 @@
           <div class="menu__user-email">johndoe@organization.com</div>
         </div>
       </div>
-      <Navbar::MenuItem @route="/dashboard" @iconName="dashboard">Dashboard</Navbar::MenuItem>
-      <Navbar::MenuItem @route="/insurance/shopping" @iconName="umbrella">Shopping</Navbar::MenuItem>
-      <Navbar::MenuItem @route="/dependents" @iconName="dependents">Dependents</Navbar::MenuItem>
-      <Navbar::MenuItem @route="/billing" @iconName="wallet">Billing</Navbar::MenuItem>
-      <Navbar::MenuItem @route="/history" @iconName="catalog">History</Navbar::MenuItem>
-      <Navbar::MenuItem @route="/retirement" @iconName="pie-chart">Retirement</Navbar::MenuItem>
+      <Navbar::MenuItem @route="index.dashboard" @iconName="dashboard" @onClick={{this.onRouteChange}}>Dashboard</Navbar::MenuItem>
+      <Navbar::MenuItem @route="index.insurance.shopping" @iconName="umbrella" @onClick={{this.onRouteChange}}>Insurance</Navbar::MenuItem>
+      <Navbar::MenuItem @route="index.dependents" @iconName="dependents" @onClick={{this.onRouteChange}}>Dependents</Navbar::MenuItem>
+      <Navbar::MenuItem @route="index.billing" @iconName="wallet" @onClick={{this.onRouteChange}}>Billing</Navbar::MenuItem>
+      <Navbar::MenuItem @route="index.history" @iconName="catalog" @onClick={{this.onRouteChange}}>History</Navbar::MenuItem>
+      <Navbar::MenuItem @route="index.retirement" @iconName="pie-chart" @onClick={{this.onRouteChange}}>Retirement</Navbar::MenuItem>
 
       <div class="menu__buttons">
         <div class="menu__button">
