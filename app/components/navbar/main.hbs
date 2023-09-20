@@ -1,7 +1,7 @@
 <div class="menu">
   <Input id="menu__toggle" @type="checkbox" @checked={{this.isMenuOpen}}/>
   <label class="menu__btn" for="menu__toggle">
-    <span></span>
+    <img class="menu__btn-img {{if this.isMenuOpen "menu__btn-img_rotated"}}" src="/assets/icons/menu.svg" />
   </label>
 
   <ul class="menu__box">
