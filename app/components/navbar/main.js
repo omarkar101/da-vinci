@@ -9,6 +9,5 @@ export default class NavbarMenuComponent extends Component {
   @action
   onRouteChange() {
     this.isMenuOpen = false;
-    console.log('test');
   }
 }
