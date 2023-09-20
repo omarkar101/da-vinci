@@ -1,4 +1,7 @@
+@import url("billing.css");
 @import url("insurance.css");
+@import url("input.css");
+@import url("button.css");
 @import url("menu.css");
 @import url("plan-card.css");
 @import url("retirement.css");
@@ -24,5 +27,7 @@ body {
   padding: 0;
   height: 100%;
   font-family: Inter;
+  overflow-y: auto;
+  overflow-x: hidden;
   background-color: #fff;
 }
