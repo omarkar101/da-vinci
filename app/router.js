@@ -11,7 +11,10 @@ Router.map(function () {
   this.route('index', { path: '/' }, function () {
     this.route('dashboard');
     this.route('insurance', function () {
-      this.route('shopping');
+      this.route('shopping', function () {
+        this.route('index', { path: '/' });
+        this.route('list', { path: '/:insuranceType' });
+      });
       this.route('ongoing');
     });
 
