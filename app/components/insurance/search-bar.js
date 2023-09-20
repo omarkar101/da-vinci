@@ -6,4 +6,8 @@ export default class SearchBarComponent extends Component {
   onInput(event) {
     this.args.setSearchTerm(event.target.value);
   }
+
+  get extraMargin() {
+    return this.args.extraMargin ?? false;
+  }
 }

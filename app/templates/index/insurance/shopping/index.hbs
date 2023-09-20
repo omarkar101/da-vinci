@@ -1,1 +1,13 @@
-<Insurance::List @insurances={{this.filteredCoverages}} />
+<div style="padding: 16px;">
+  <Insurance::SearchBar
+    @setSearchTerm={{this.setSearchTerm}}
+    @searchTerm={{this.searchTerm}}
+  />
+  {{#if (eq this.filteredCoverages.length 0)}}
+    <div class="empty-list">
+      <h2>No results found</h2>
+    </div>
+  {{else}}
+    <Insurance::List @insurances={{this.filteredCoverages}} />
+  {{/if}}
+</div>
