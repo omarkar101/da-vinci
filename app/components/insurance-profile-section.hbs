@@ -1,0 +1,37 @@
+<div class="insurance-profile-section">
+  <div class="insurance-profile-section__header">
+    <div class="insurance-profile-section__header-title">
+      Shop Insurance
+    </div>
+    <LinkTo @route="index.insurance" class="insurance-profile-section__header-view-all">
+      View All
+    </LinkTo>
+  </div>
+  <div class="insurance-profile-section__insurance-types">
+    <div class="insurance-profile-section__insurance-type insurance-profile-section__insurance-type_selected">
+      <div class="insurance-profile-section__insurance-icon">
+        <img height="34px" width="34px" src="/assets/icons/heart-with-red-background.svg" alt="heart" />
+      </div>
+      <div class="insurance-profile-section__insurance-type-label">
+        Medical
+      </div>
+    </div>
+    <div class="insurance-profile-section__insurance-type">
+      <div class="insurance-profile-section__insurance-icon">
+        <img src="/assets/icons/dental.svg" alt="heart" />
+      </div>
+      <div class="insurance-profile-section__insurance-type-label">
+        Dental
+      </div>
+    </div>
+    <div class="insurance-profile-section__insurance-type">
+      <div class="insurance-profile-section__insurance-icon">
+        <img src="/assets/icons/vision.svg" alt="vision" />
+      </div>
+      <div class="insurance-profile-section__insurance-type-label">
+        Vision
+      </div>
+    </div>
+  </div>
+  <PlanCard />
+</div>
