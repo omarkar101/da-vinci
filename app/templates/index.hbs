@@ -1,5 +1,23 @@
 <div class="header" id="header">
-  <Navbar::Main />
-  <div class="header__title">{{this.headerTitle}}</div>
+  {{#if this.isBackButtonVisible}}
+    <div {{on "click" this.onBackClick}} class="back-button">
+      <img class="back-button-img" src="/assets/icons/arrow-left.svg">
+    </div>
+  {{else}}
+    <Navbar::Main />
+  {{/if}}
+  <div class="icon-and-title">
+    {{#if this.isIconVisible}}
+      <img class="header__icon" src={{this.iconSrcString}}>
+    {{/if}}
+    <div class="header__title">{{this.headerTitle}}</div>
+  </div>
+  {{#if this.isBackButtonVisible}}
+    <Insurance::SearchBar
+      @setSearchTerm={{this.setSearchTerm}}
+      @searchTerm={{this.searchTerm}}
+      @extraMargin={{true}}
+    />
+  {{/if}}
 </div>
 {{outlet}}

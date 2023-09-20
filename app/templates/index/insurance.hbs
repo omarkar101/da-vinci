@@ -1,14 +1,4 @@
 <div class="insurance-page">
-  <div style="padding: 16px">
-    <Insurance::Filter::Main
-      @categories={{this.filterCategories}}
-      @changeActiveCategory={{action this.changeActiveCategory}}
-    />
-    <Insurance::SearchBar
-      @setSearchTerm={{this.setSearchTerm}}
-      @searchTerm={{this.searchTerm}}
-    />
-  </div>
   {{#if this.isFilteredInsuranceListEmpty}}
     <div class="empty-list">
       <h2>No results found</h2>

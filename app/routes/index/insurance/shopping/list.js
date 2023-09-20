@@ -6,6 +6,11 @@ export default class IndexInsuranceShoppingListRoute extends Route {
     controller.setup();
   }
 
+  resetController(controller, ...rest) {
+    super.resetController(controller, ...rest);
+    controller.reset();
+  }
+
   async model({ insuranceType }) {
     return {
       insuranceType: insuranceType,

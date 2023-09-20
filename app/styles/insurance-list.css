@@ -1,8 +1,9 @@
 .insurance-list {
   display: grid;
   width: 100%;
+  margin-top: 24px;
+  padding-bottom: 16px;
   overflow-y: scroll;
-  padding: 16px;
   box-sizing: border-box;
   grid-template-columns: 200px 200px;
   justify-content: space-between;

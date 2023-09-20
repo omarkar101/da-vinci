@@ -1,1 +1,7 @@
-<Insurance::List @insurances={{this.filteredCoverages}} />
+<div style="padding: 16px;">
+  <Insurance::SearchBar
+    @setSearchTerm={{this.setSearchTerm}}
+    @searchTerm={{this.searchTerm}}
+  />
+  <Insurance::List @insurances={{this.filteredCoverages}} />
+</div>
