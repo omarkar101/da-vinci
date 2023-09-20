@@ -1,0 +1,49 @@
+<div class="employee-info-container__fields">
+  <h3 style="margin-bottom: 10px;">Current Account</h3>
+  <div class="employee-info-container__field">
+    <div class="employee-info-container__field-label">
+      Account Number
+    </div>
+    <InputField @placeholder="Ex. 123456789" />
+  </div>
+
+  <div class="employee-info-container__field">
+    <div class="employee-info-container__field-label">
+      Account Balance
+    </div>
+    <InputField @placeholder="Ex. $40,000.00" />
+  </div>
+
+  <div class="employee-info-container__field">
+    <div class="employee-info-container__field-label">
+      Contribution Rate
+    </div>
+    <InputField @placeholder="Ex. 20%" />
+  </div>
+
+  <div class="employee-info-container__field">
+    <div class="employee-info-container__field-label">
+      Employer Match Percentage
+    </div>
+    <InputField @placeholder="Ex. 20%" />
+  </div>
+  <h3 style="margin-bottom: 10px;">Previous Account(s)</h3>
+  <div class="employee-info-container__field-check">
+    <img src="/assets/green-checkbox.svg" class="employee-info__checkbox" />
+    <div>Show previous account(s)</div>
+  </div>
+  <div class="employee-info-container__field">
+    <div class="employee-info-container__field-label">
+      Previous Account Number(s)
+    </div>
+    <InputField @placeholder="Ex. 123456789" />
+  </div>
+
+  <div class="employee-info-container__field">
+    <div class="employee-info-container__field-label">
+      Previous Account Balance
+    </div>
+    <InputField @placeholder="Ex. $40,000.00" />
+  </div>
+  <Button @label="Add Account" @styleClass="button" style="margin-bottom: 50px;" />
+</div>
