@@ -1,0 +1,32 @@
+<div class="billing-dashboard">
+  <div class="billing-dashboard__header">
+    <div class="billing-dashboard__header-title">
+      Bills Due
+    </div>
+    <LinkTo @route="index.billing" class="billing-dashboard__header-view-all">
+      View All
+    </LinkTo>
+  </div>
+  <Billing::BillDue
+    @planName="Silver Comprehensive"
+    @vendorName="Oscar"
+    @type="Medical"
+    @date="01/01/2023"
+    @amount="$412.00"
+    @iconSrc="/assets/medical-plan.svg"
+    @typeIconSrc="/assets/icons/heart-with-red-background.svg"
+    @inDashboard={{true}}
+  />
+
+  <Billing::BillDue
+    @planName="International - Europe"
+    @vendorName="UnitedHealthCare"
+    @type="Travel"
+    @date="12/12/2023"
+    @amount="$440.33"
+    @iconSrc="/assets/medical-plan.svg"
+    @typeIconSrc="/assets/icons/plane-circle.svg"
+    @isGreen={{true}}
+    @inDashboard={{true}}
+  />
+</div>

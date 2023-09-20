@@ -5,6 +5,6 @@ export default class IndexDependentsController extends Controller {
   indexController;
 
   setup() {
-    this.indexController.headerTitle = 'Dependents';
+    this.indexController.headerTitle = 'Dependents & Beneficiaries';
   }
 }
