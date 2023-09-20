@@ -79,6 +79,7 @@
 .retirement__dialog-header-close {
   height: 20px;
   width: 20px;
+  cursor: pointer;
 }
 
 

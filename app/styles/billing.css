@@ -215,3 +215,36 @@
 .bill-due__info-amount_color_green {
   color: #33df8f;
 }
+
+.billing-dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.billing-dashboard__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.billing-dashboard__header-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.billing-dashboard__header-view-all {
+  font-size: 14px;
+  color: #1297ac;
+}
+
+.bill-due_in-dashboard {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: none;
+}
+
+.bill-due_in-dashboard.bill-due:hover {
+  transition: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
