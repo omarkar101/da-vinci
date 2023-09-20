@@ -5,8 +5,7 @@
   height: 100px;
   padding: 27px 30px 15px;
   background-color: #fff;
-  margin-bottom: 20px;
-  box-shadow: 6px 0 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 4px rgba(227, 227, 227, 0.25);
 }
 
 .header__is-sticky {

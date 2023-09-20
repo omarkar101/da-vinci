@@ -4,7 +4,16 @@
       @categories={{this.filterCategories}}
       @changeActiveCategory={{action this.changeActiveCategory}}
     />
-    <Insurance::SearchBar />
+    <Insurance::SearchBar
+      @setSearchTerm={{this.setSearchTerm}}
+      @searchTerm={{this.searchTerm}}
+    />
   </div>
-  {{outlet}}
+  {{#if this.isFilteredInsuranceListEmpty}}
+    <div class="empty-list">
+      <h2>No results found</h2>
+    </div>
+  {{else}}
+    {{outlet}}
+  {{/if}}
 </div>
