@@ -1,89 +1,10 @@
-import Controller, { inject as controller } from '@ember/controller';
-import { tracked } from '@glimmer/tracking';
-import { action } from '@ember/object';
+export const COVERAGE_TYPE_MAP = {
+  1: 'core',
+  2: 'additionalCore',
+  3: 'recommended',
+};
 
-export default class InsuranceController extends Controller {
-  @tracked
-  searchTerm = '';
-
-  @controller('index')
-  indexController;
-
-  @tracked
-  filterCategories = [
-    new Category({
-      key: 'shopping',
-      label: 'Shopping',
-      isActive: true,
-    }),
-    new Category({
-      key: 'current',
-      label: 'Current',
-      isActive: false,
-    }),
-  ];
-
-  get filteredCoverages() {
-    return this.allCoverageFields.filter(({ label }) =>
-      label.toLowerCase().includes(this.searchTerm.toLowerCase()),
-    );
-  }
-
-  get allCoverageFields() {
-    let coverageFields = [];
-    for (const key of Object.keys(COVERAGES)) {
-      COVERAGES[key].coverageFields.map((coverageField) =>
-        coverageFields.push({
-          key: coverageField.key,
-          label: coverageField.label,
-          type: key,
-          imgSrc: coverageField.imgSrc,
-          coverages: coverageField.coverages,
-        }),
-      );
-    }
-    return coverageFields;
-  }
-
-  get isFilteredInsuranceListEmpty() {
-    return !this.filteredCoverages.length;
-  }
-
-  @action
-  setSearchTerm(newTerm) {
-    this.searchTerm = newTerm;
-  }
-
-  @action
-  changeActiveCategory(newCategory) {
-    this.filterCategories.forEach(
-      (category) => (category.isActive = category.key === newCategory),
-    );
-  }
-
-  setup() {
-    this.indexController.headerTitle = 'Insurance';
-  }
-}
-
-class Category {
-  @tracked
-  key = null;
-
-  @tracked
-  label = null;
-
-  @tracked
-  isActive = null;
-
-  constructor({ key, label, isActive }) {
-    this.key = key;
-    this.label = label;
-    this.isActive = isActive;
-  }
-}
-
-const COVERAGES = {
+export const COVERAGES = {
   core: {
     key: 'coreCoverage',
     label: 'Core Coverage',
@@ -101,7 +22,7 @@ const COVERAGES = {
       {
         key: 'life',
         label: 'Life',
-        imgSrc: 'life.svg',
+        imgSrc: 'heart.svg',
         coverages: [
           { name: 'Bestow' },
           { name: 'New York Life' },
@@ -112,7 +33,7 @@ const COVERAGES = {
       {
         key: 'dental',
         label: 'Dental',
-        imgSrc: 'tooth.svg',
+        imgSrc: 'heart.svg',
         coverages: [
           { name: 'Bestow' },
           { name: 'United Concordia' },
@@ -139,7 +60,7 @@ const COVERAGES = {
       {
         key: 'criticalIllness',
         label: 'Critical Illness',
-        imgSrc: 'virus.svg',
+        imgSrc: 'heart.svg',
         coverages: [
           { name: 'Aflac' },
           { name: 'Colonial Life' },
@@ -149,13 +70,13 @@ const COVERAGES = {
       {
         key: 'accident',
         label: 'Accident',
-        imgSrc: 'warning.svg',
+        imgSrc: 'heart.svg',
         coverages: [{ name: 'Aflac' }, { name: 'MetLife' }, { name: 'Unum' }],
       },
       {
         key: 'cancer',
         label: 'Cancer',
-        imgSrc: 'cancer.svg',
+        imgSrc: 'heart.svg',
         coverages: [
           { name: 'Aflac' },
           { name: 'Cancer Treatment Centers' },
@@ -171,7 +92,7 @@ const COVERAGES = {
       {
         key: 'auto',
         label: 'Auto',
-        imgSrc: 'auto.svg',
+        imgSrc: 'heart.svg',
         coverages: [
           { name: 'MetroMile' },
           { name: 'State Farm' },
@@ -182,7 +103,7 @@ const COVERAGES = {
       {
         key: 'home',
         label: 'Home',
-        imgSrc: 'home.svg',
+        imgSrc: 'heart.svg',
         coverages: [
           { name: 'Hippo' },
           { name: 'Allstate' },
@@ -204,7 +125,7 @@ const COVERAGES = {
       {
         key: 'travel',
         label: 'Travel',
-        imgSrc: 'plane.svg',
+        imgSrc: 'heart.svg',
         coverages: [
           { name: 'Spot' },
           { name: 'AIG Travel' },
@@ -215,7 +136,7 @@ const COVERAGES = {
       {
         key: 'legal',
         label: 'Legal',
-        imgSrc: 'legal.svg',
+        imgSrc: 'heart.svg',
         coverages: [
           { name: 'LegalShield' },
           { name: 'Hyatt Legal' },

@@ -1,26 +1,25 @@
 <div class="plan-card">
   <div class="plan-card__header">
-    <div class="plan-card__photo">
-      <img src="/assets/medical-plan.svg" alt="medical plan" />
+      <img class="plan-card__photo" src="/assets/medical-plan.svg" alt="medical plan" />
+      <div class="plan-card__title">
+        <div class="plan-card__title-plan-name">Plan Name</div>
+        <div class="plan-card__title-vendor-name">Vendor Name</div>
+      </div>
+  </div>
+  <div class="plan-card__body">
+    <div class="plan-card__field-amounts">
+      <div class="plan-card__field-label">Deductible</div>
+      <div class="plan-card__field-value">{{this.deductibleValue}}</div>
     </div>
-    <div class="plan-card__title">
-      <div class="plan-card__title-plan-name">Plan Name</div>
-      <div class="plan-card__title-vendor-name">Vendor Name</div>
+    <div class="plan-card__field-amounts">
+      <div class="plan-card__field-label">Coinsurance</div>
+      <div class="plan-card__field-value">{{this.coinsuranceValue}}</div>
+    </div>
+    <div class="plan-card__field-amounts">
+      <div class="plan-card__field-label">Plan Network</div>
+      <div class="plan-card__field-value">{{this.planNetworkValue}}</div>
     </div>
   </div>
-  <div class="plan-card__field-deductible">
-    <div class="plan-card__field-label">Deductible</div>
-    <div class="plan-card__field-value">{{this.deductibleValue}}</div>
-  </div>
-  <div class="plan-card__field-coinsurance">
-    <div class="plan-card__field-label">Coinsurance</div>
-    <div class="plan-card__field-value">{{this.coinsuranceValue}}</div>
-  </div>
-  <div class="plan-card__field-plan-network">
-    <div class="plan-card__field-label">Plan Network</div>
-    <div class="plan-card__field-value">{{this.planNetworkValue}}</div>
-  </div>
-
   <div class="plan-card__button-container">
     {{#if this.isAcquired}}
       <button type="button" class="plan-card__button plan-card__button_remove-plan">

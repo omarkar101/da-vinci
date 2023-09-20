@@ -1,0 +1,135 @@
+{
+  "core": {
+    "key": "coreCoverage",
+    "label": "Core Coverage",
+    "coverageFields": [
+      {
+        "key": "medical",
+        "label": "Medical",
+        "coverages": [
+          { "name": "Oscar" },
+          { "name": "Humana" },
+          { "name": "UnitedHealthCare" }
+        ]
+      },
+      {
+        "key": "life",
+        "label": "Life",
+        "coverages": [
+          { "name": "Bestow" },
+          { "name": "New York Life" },
+          { "name": "Prudential" },
+          { "name": "Northwestern Mutual" }
+        ]
+      },
+      {
+        "key": "dental",
+        "label": "Dental",
+        "coverages": [
+          { "name": "Bestow" },
+          { "name": "United Concordia" },
+          { "name": "Cigna" }
+        ]
+      },
+      {
+        "key": "vision",
+        "label": "Vision",
+        "coverages": [
+          { "name": "VSP Vision Care" },
+          { "name": "EyeMed" },
+          { "name": "Davis Vision" },
+          { "name": "FedVIP" }
+        ]
+      }
+    ]
+  },
+  "additionalCore": {
+    "key": "additionalCoreCoverage",
+    "label": "Additional Core Coverage",
+    "coverageFields": [
+      {
+        "key": "criticalIllness",
+        "label": "Critical Illness",
+        "coverages": [
+          { "name": "Aflac" },
+          { "name": "Colonial Life" },
+          { "name": "MetLife" }
+        ]
+      },
+      {
+        "key": "accident",
+        "label": "Accident",
+        "coverages": [
+          { "name": "Aflac" },
+          { "name": "MetLife" },
+          { "name": "Unum" }
+        ]
+      },
+      {
+        "key": "cancer",
+        "label": "Cancer",
+        "coverages": [
+          { "name": "Aflac" },
+          { "name": "Cancer Treatment Centers" },
+          { "name": "MetLife" }
+        ]
+      }
+    ]
+  },
+  "recommendations": {
+    "key": "coverageRecommendations",
+    "label": "Coverage Recommendations",
+    "coverageFields": [
+      {
+        "key": "auto",
+        "label": "Auto",
+        "coverages": [
+          { "name": "MetroMile" },
+          { "name": "State Farm" },
+          { "name": "Geico" },
+          { "name": "Progressive" }
+        ]
+      },
+      {
+        "key": "home",
+        "label": "Home",
+        "coverages": [
+          { "name": "Hippo" },
+          { "name": "Allstate" },
+          { "name": "State Farm" },
+          { "name": "Liberty Mutual" }
+        ]
+      },
+      {
+        "key": "pet",
+        "label": "Pet",
+        "coverages": [
+          { "name": "Pumpkin" },
+          { "name": "ASPCA" },
+          { "name": "Figo" },
+          { "name": "Spot" }
+        ]
+      },
+      {
+        "key": "travel",
+        "label": "Travel",
+        "coverages": [
+          { "name": "Spot" },
+          { "name": "AIG Travel" },
+          { "name": "Travelers" },
+          { "name": "Allianze Global Assistance" }
+        ]
+      },
+      {
+        "key": "legal",
+        "label": "Legal",
+        "coverages": [
+          { "name": "LegalShield" },
+          { "name": "Hyatt Legal" },
+          { "name": "Rocket Lawyer" },
+          { "name": "USLegal" }
+        ]
+      }
+    ]
+  }
+}

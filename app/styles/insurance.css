@@ -1,6 +1,16 @@
 .empty-list {
   padding: 16px;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.coverages-list {
+  gap: 12px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

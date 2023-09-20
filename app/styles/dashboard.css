@@ -1,0 +1,8 @@
+.dashboard-container {
+  background-color: #F5F6FA;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

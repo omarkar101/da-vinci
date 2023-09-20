@@ -1,0 +1,217 @@
+.billing {
+  height: 100%;
+  padding: 25px;
+  color: #1d1e20;
+  background-color: #f5f6fa;
+}
+
+.billing__invoice-summary {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 2em;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-bottom: 30px;
+}
+
+.billing__invoice-summary:hover {
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.invoice-summary__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.invoice-summary__title {
+  display: flex;
+  flex-direction: column;
+}
+
+.invoice-summary__name {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.invoice-summary__date {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+}
+
+.invoice-summary__id {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+}
+
+.invoice-summary__table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: 0.5px dashed grey;
+  border-bottom: 0.5px dashed grey;
+  padding: 20px 3px;
+}
+
+.invoice-summary__table-header {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.invoice-summary__table-header-item {
+  font-size: 13px;
+  flex: 1;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.8px;
+}
+
+.invoice-summary__table-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.invoice-summary__table-row-item {
+  flex: 1;
+}
+
+.invoice-summary__table-total-title {
+  flex: 2;
+  font-weight: 600;
+}
+
+.invoice-summary__table-total-row {
+  display: flex;
+  margin-top: 10px;
+}
+
+.invoice-summary__buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #68e28d;
+}
+
+.invoice-summary__button:hover {
+  font-weight: 700;
+}
+
+.invoice-summary__button_color-red {
+  color: rgb(248, 133, 104);
+}
+
+.billing__bills-due-title {
+  color: #1d1e20;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 22px */
+  margin-bottom: 15px;
+}
+
+.bill-due {
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  padding: 18px;
+  background: #fff;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-bottom: 15px;
+}
+
+.bill-due:hover {
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.bill-due__title {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  color: var(--2, #333);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  margin-left: 12px;
+}
+
+.bill-due__name {
+  margin-bottom: 3px;
+}
+
+.bill-due__vendor {
+  color: #404040;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.1px;
+}
+
+.bill-due__type {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.bill-due__type-name {
+  color: #404040;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.1px;
+  margin-left: 6px;
+}
+
+.bill-due__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; /* 13.2px */
+}
+
+.bill-due__info-date {
+  border-radius: 4px;
+  background: #f36d5a;
+  display: flex;
+  padding: 3px 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.bill-due__info-amount {
+  color: #f36d5a;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.16px;
+}
+
+.bill-due__info-date_color_green {
+  background: #33df8f;
+}
+
+.bill-due__info-amount_color_green {
+  color: #33df8f;
+}
