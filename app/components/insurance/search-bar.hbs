@@ -1,7 +1,12 @@
 <div class="search-insurance">
   <div class="search-insurance__search-field">
     <span class="material-symbols-outlined search-insurance__search-icon">search</span>
-    <input class="search-insurance__search-input" placeholder="Search..." />
+    <input
+      class="search-insurance__search-input"
+      placeholder="Search..."
+      {{on "input" this.onInput}}
+      value={{@searchTerm}}
+    />
   </div>
   <div class="search-insurance__filter-btn">
     <img class="search-insurance__filter-icon" alt="filter" src="/assets/icons/filter.svg"/>

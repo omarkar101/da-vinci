@@ -16,12 +16,12 @@
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
 }
 
-.menu__btn::after {
-  width: 100%;
-  height: 100%;
+.menu__btn-img {
   transition: transform 150ms ease;
-  content: "";
-  background: url("/assets/icons/menu.svg") center no-repeat;
+}
+
+.menu__btn-img_rotated {
+  transform: rotateZ(90deg);
 }
 
 #menu__toggle:checked + .menu__btn::after {

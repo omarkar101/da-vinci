@@ -2,7 +2,37 @@ import Controller, { inject as controller } from '@ember/controller';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
+const INSURANCE_TYPES = [
+  {
+    type: 'medical',
+    label: 'Medical',
+    imgSrc: 'heart.svg',
+    isCore: true,
+  },
+  {
+    type: 'vision',
+    label: 'Vision',
+    imgSrc: 'glasses.svg',
+    isCore: true,
+  },
+  {
+    type: 'accident',
+    label: 'Accident',
+    imgSrc: 'warning.svg',
+    isCore: true,
+  },
+  {
+    type: 'pet',
+    label: 'Pet',
+    imgSrc: 'pet.svg',
+    isCore: false,
+  },
+];
+
 export default class InsuranceController extends Controller {
+  @tracked
+  searchTerm = '';
+
   @controller('index')
   indexController;
 
@@ -19,6 +49,21 @@ export default class InsuranceController extends Controller {
       isActive: false,
     }),
   ];
+
+  get filteredInsurances() {
+    return INSURANCE_TYPES.filter(({ label }) =>
+      label.toLowerCase().includes(this.searchTerm.toLowerCase()),
+    );
+  }
+
+  get isFilteredInsuranceListEmpty() {
+    return !this.filteredInsurances.length;
+  }
+
+  @action
+  setSearchTerm(newTerm) {
+    this.searchTerm = newTerm;
+  }
 
   @action
   changeActiveCategory(newCategory) {

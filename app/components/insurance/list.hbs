@@ -1,5 +1,5 @@
 <div class="insurance-list">
-  {{#each this.insurances as |insurance|}}
+  {{#each @insurances as |insurance|}}
     <Insurance::CategoryCard::Main
       @isCore={{insurance.isCore}}
       @imgSrc={{insurance.imgSrc}}
