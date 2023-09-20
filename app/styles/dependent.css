@@ -1,0 +1,31 @@
+.dependents {
+  height: 100%;
+  background-color: #f5f6fa;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dependent-card__checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+}
+
+.dependent-card__check {
+  width: 16px;
+  height: 16px;
+}
+
+.dependent-card__plans {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.dependent-card__plan-section {
+  width: 70px
+}

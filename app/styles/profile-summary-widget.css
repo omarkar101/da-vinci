@@ -55,6 +55,28 @@
   justify-content: center;
 }
 
+.profile-summary__profile-logo_bigger {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.profile-summary__profile-logo_salmon {
+  background-color: salmon;
+}
+
+.profile-summary__profile-logo_light-blue {
+  background-color: lightblue;
+}
+
+.profile-summary__profile-logo_red {
+  background-color: red;
+}
+
+.profile-summary__profile-logo_green {
+  background-color: green;
+}
+
 .profile-summary__title {
   grid-area: plan-title;
   display: flex;
