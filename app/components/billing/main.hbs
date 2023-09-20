@@ -1,0 +1,47 @@
+<div class="billing">
+  <Billing::InvoiceSummary />
+  <div style="margin-bottom: 20px;"></div>
+  <div class="billing__bills-due-title">Bills Due</div>
+  <Billing::BillDue
+    @planName="Gold 2000"
+    @vendorName="UnitedHealthCare"
+    @type="Medical"
+    @date="12/12/2023"
+    @amount="$440.33"
+    @iconSrc="/assets/medical-plan.svg"
+    @typeIconSrc="/assets/icons/heart-with-red-background.svg"
+    @isGreen={{true}}
+  />
+
+  <Billing::BillDue
+    @planName="Platinum 600"
+    @vendorName="Humana"
+    @type="Medical"
+    @date="03/11/2023"
+    @amount="$324.13"
+    @iconSrc="/assets/medical-plan.svg"
+    @typeIconSrc="/assets/icons/heart-with-red-background.svg"
+    @isGreen={{true}}
+  />
+
+  <Billing::BillDue
+    @planName="Silver Comprehensive"
+    @vendorName="Oscar"
+    @type="Medical"
+    @date="01/01/2023"
+    @amount="$412.00"
+    @iconSrc="/assets/medical-plan.svg"
+    @typeIconSrc="/assets/icons/heart-with-red-background.svg"
+  />
+
+  <Billing::BillDue
+    @planName="International - Europe"
+    @vendorName="UnitedHealthCare"
+    @type="Travel"
+    @date="12/12/2023"
+    @amount="$440.33"
+    @iconSrc="/assets/medical-plan.svg"
+    @typeIconSrc="/assets/icons/plane-circle.svg"
+    @isGreen={{true}}
+  />
+</div>
