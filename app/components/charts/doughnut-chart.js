@@ -19,7 +19,12 @@ export default class DoughnutChartComponent extends Component {
       );
 
       const data = {
-        labels: ['Current Account', 'Account 2', 'Account 3', 'Account 4'],
+        labels: [
+          'Current Account',
+          'Fidelity Investments Account',
+          'Empower Retirement Account',
+          'Vanguard Account',
+        ],
         datasets: [
           {
             data: accountBalances,

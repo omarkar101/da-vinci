@@ -1,0 +1,17 @@
+<div class="retirement__dialog">
+  <div class="retirement__dialog-content">
+    <div class="retirement__dialog-header">
+      <h2 class="retirement__dialog-title">Manage Old 401(k) Accounts</h2>
+      <img src="/assets/x-red.svg" class="retirement__dialog-header-close" {{on "click" this.close}} />
+    </div>
+    <div class="retirement__dialog-form">
+      <InputField @type="text" @label="Account Number(s)" @placeholder="Ex. 12345678" @value={{this.accountNumber}} />
+      <Button @label="Add Account" @styleClass="button" />
+      <div>Roll Over Into:</div>
+      <div class="retirement__dialog-actions">
+        <Button @label="Current Account" @styleClass="button button_aquamarine" />
+        <Button @label="IRA" @styleClass="button button_salmon" />
+      </div>
+    </div>
+  </div>
+</div>
