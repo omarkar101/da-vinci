@@ -1,0 +1,21 @@
+.retirement-profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.retirement-profile-section__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.retirement-profile-section__header-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.retirement-profile-section__header-view-all {
+  font-size: 14px;
+  color: #1297AC;
+}
