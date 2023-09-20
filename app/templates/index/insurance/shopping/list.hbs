@@ -1,5 +1,8 @@
 <div class="coverages-list">
-  {{#each this.selectedCoverages}}
-    <PlanCard />
+  {{#each this.coveragesToShow as |coverage|}}
+    <PlanCard
+      @status={{coverage.status}}
+      @planName={{coverage.name}}
+    />
   {{/each}}
 </div>

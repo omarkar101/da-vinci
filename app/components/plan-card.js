@@ -22,6 +22,6 @@ export default class PlanCard extends Component {
   }
 
   get isAcquired() {
-    return this.args.isAcquired ?? false;
+    return this.args.status === 'current' ?? false;
   }
 }
