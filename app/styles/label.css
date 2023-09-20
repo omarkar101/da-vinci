@@ -8,7 +8,7 @@
 
   padding: 0 6px;
   color: #FFFFFF;
-  font-size: 12px;
+  font-size: 11px;
   border-radius: 4px;
   text-transform: uppercase;
 }
@@ -18,9 +18,16 @@
 }
 
 .label-color-blue {
-  background-color: #1297AC;
+  color: #1297AC;
+  border: 1px solid #1297AC;
 }
 
 .label-color-purple {
-  background-color: #9747FF;
+  color: #9747FF;
+  border: 1px solid #9747FF;
+}
+
+.label-color-green {
+  color: #28AC12;
+  border: 1px solid #28AC12;
 }

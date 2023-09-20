@@ -2,13 +2,31 @@ import Component from '@glimmer/component';
 
 export default class LabelComponent extends Component {
   get colorKey() {
-    return this.args.isCore ? 'blue' : 'purple';
+    switch (this.args.type) {
+      case 'core':
+        return 'blue';
+      case 'recommendations':
+        return 'purple';
+      case 'additionalCore':
+        return 'green';
+      default:
+        return '';
+    }
   }
   get colorModifier() {
     return `label-color-${this.colorKey}`;
   }
 
   get label() {
-    return this.args.isCore ? 'Core' : 'For You';
+    switch (this.args.type) {
+      case 'core':
+        return 'Core';
+      case 'recommendations':
+        return 'For You';
+      case 'additionalCore':
+        return 'Core+';
+      default:
+        return '';
+    }
   }
 }
