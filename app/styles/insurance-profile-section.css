@@ -1,0 +1,49 @@
+.insurance-profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.insurance-profile-section__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.insurance-profile-section__header-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.insurance-profile-section__header-view-all {
+  font-size: 14px;
+  color: #1297AC;
+}
+
+.insurance-profile-section__insurance-types {
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.insurance-profile-section__insurance-type {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  gap: 8px;
+  border-radius: 30px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.insurance-profile-section__insurance-type_selected {
+  background: rgba(18, 151, 172, 0.20);
+}
+
+.insurance-profile-section__insurance-icon {
+  height: 34px;
+  width: 34px;
+}
+
